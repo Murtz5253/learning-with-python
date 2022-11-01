@@ -23,6 +23,9 @@ Nikolay will want to do everything that the above user does, but additionally vi
 Yilin will want to evaluate student progress, view their solutions/submitted work, provide feedback to students, and select topics/problems which will be used for their curriculum. The teacher is expected to have some more knowledge, and it might be helpful to give the teacher the ability to interact with the program at a lower level of abstraction to add/remove problems.
 ### User 3 Cases
 - Create curriculum
+  - Specify problems from problem bank to include in curriculum
+- View problem bank
+- View available topics to learn
 - View curriculum
 - View student learning progress
 - Create assignments
@@ -30,4 +33,3 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 - View student problems
 - View solution
 - Provide feedback
-- Add problems to problem bank
