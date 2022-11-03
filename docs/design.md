@@ -33,3 +33,78 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 - View student problems
 - View solution
 - Provide feedback
+
+## Use Cases
+### View Available Topics to Learn
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Learning Progress
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Problem Bank
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### Submit Problems
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Solution
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### Create Curriculum
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Curriculum
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### Create Assugnments
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Assignments
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### Create Feedback for Students
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Feedback
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+### View Student Learning Process
+#### Name:
+#### What it does:
+#### Inputs (with type information)
+#### Outputs (with type information)
+
+
