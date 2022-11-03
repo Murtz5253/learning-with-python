@@ -36,75 +36,75 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 
 ## Use Cases
 ### View Available Topics to Learn
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Learning Progress
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Problem Bank
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### Submit Problems
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Solution
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### Create Curriculum
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Curriculum
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### Create Assugnments
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Assignments
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### Create Feedback for Students
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Feedback
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 ### View Student Learning Process
-#### Name:
-#### What it does:
-#### Inputs (with type information)
-#### Outputs (with type information)
+#### _Name:_
+#### _What it does:_
+#### _Inputs (with type information)_
+#### _Outputs (with type information)_
 
 
