@@ -34,7 +34,7 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 - View solution
 - Provide feedback
 
-## Use Cases
+# Use Cases
 
 ### Output Schema of 'Magic' Algorithm
 #### _Name:_ mag_alg
@@ -122,3 +122,5 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 #### _What it does:_ Very similar to view learning progress (v_learn_prog) except you can filter based on the students in your class, or generate graphics for your class as a whole. Generates graphics to display learning progress of student(s). Shows what they have learned, what they need to learn, areas they have struggled or excelled in, maybe amount of time spent in several areas, and relative size of a topic. Similar to the plots a Jira Dashboard would produce.
 #### _Inputs (with type information):_ Results from the Data Processing and Data Analysis Algorithms for student(s)/class *(ASK GROUP MAYBE JUST ONE OF THEM)* (type: TBD, but likely numpy arrays or dataframes)
 #### _Outputs (with type information):_ Clear, readable graphical representations of student(s)/class progress. Should be able to help them identify areas of strengths and weaknesses. (type: plots)
+
+# Component Specs
