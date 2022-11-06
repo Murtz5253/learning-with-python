@@ -36,10 +36,10 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 
 ## Use Cases
 ### View Available Topics to Learn
-#### _Name:_
-#### _What it does:_
-#### _Inputs (with type information)_
-#### _Outputs (with type information)_
+#### _Name:_v_avail_topic
+#### _What it does:_ When a user navigates to this page/tab on the app it will populate a list of available topics. Topics the user has already learned/mastered/marked as complete will be labelled as such to make it easy for the user to see what they have done and what they need to do.
+#### _Inputs (with type information):_ List of topics (python list), Topics user has completed (python list, can make this another column of the list of topics - mark a topics as 1 if completed or 0 if not completed), whether or not a refresh button has been pressed (similar to the degree audit on myplan, type is whether or not a key is pressed, boolean)
+#### _Outputs (with type information):_A list of topics which clearly indicates which have been compelted and which hasn't (python list in a UI), these topics can be selected to navigate user to practice problems/instruction on that topic.
 
 ### View Learning Progress
 #### _Name:_
@@ -56,7 +56,7 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 ### Submit Problems
 #### _Name:_
 #### _What it does:_
-#### _Inputs (with type information)_
+#### _Inputs (with type information):_
 #### _Outputs (with type information)_
 
 ### View Solution
