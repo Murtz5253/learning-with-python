@@ -115,4 +115,10 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 #### _Outputs (with type information):_ Clear, readable graphical representations of student(s)/class progress. Should be able to help them identify areas of strengths and weaknesses. (type: plots)
 
 # Component Specs
-# MURTAZA FILL THIS OUT
+There are four primary components to our system design:
+1. A concept inventory of practice programming questions, separated by topic, for students and teachers to use.
+2. A web application (including database on the back end and usable application on the front end).
+3. A "magic algorithm" which takes student soltions as input and outputs a JSON file of data which contains information about student mastery of each topic. This algorithm is out of scope for the current system, and its output will be synthetically generated.
+4. A data processing and analysis algorithm which takes the above JSON data and outputs relevant statistics and visualizations for the user.
+
+At a high level, questions will be stored in the database and displayed on the web application. As users complete questions, data will be continuously POSTed to the back end servers, and passed along to the magic algorithm (not being implemented currently), which in turn outputs JSON data containing information aboutuser progress on each topic. This data is then fed into a processing and analysis algorithm on the backend, whose results are finally displayed on the front end to users. A visual of this design is provided below.
