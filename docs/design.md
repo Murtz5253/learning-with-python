@@ -36,26 +36,20 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 
 # Use Cases
 
-### Output Schema of 'Magic' Algorithm
+### 'Magic' Algorithm
 #### _Name:_ mag_alg
-#### _What it does:_ recieves data from submit_prob and compares it to a list of submitted solutions. 
+#### _What it does:_ recieves data from submit_prob and compares it to a list of submitted solutions. JSON format
 #### _Inputs (with type information):_ Problems submitted by student in submit_prob *(type: WHAT TYPE WOULD THIS BE?)*
-#### _Outputs (with type information):_
+#### _Outputs (with type information):_ JSON data with specified TBD schema (type: JSON)
 
-### Data Processing Algorithm
-#### _Name:_ proc_alg
+### Data Processing and Analysis Algorithm
+#### _Name:_ data_alg
 #### _What it does:_
-#### _Inputs (with type information):_
-#### _Outputs (with type information):_
-
-### Data Analysis Algorithm
-#### _Name:_anal_alg
-#### _What it does:_
-#### _Inputs (with type information):_
-#### _Outputs (with type information):_
+#### _Inputs (with type information):_ JSON data from mag_alg with specified TBD schema (type: JSON)
+#### _Outputs (with type information):_ Bearkdown of student performance that can be used to generate plots in other use cases (type: numpy array)
 
 ### View Available Topics to Learn
-#### _Name:_v_avail_topic
+#### _Name:_ v_avail_topic
 #### _What it does:_ When a user navigates to this page/tab on the app it will populate a list of available topics. Topics the user has already learned/mastered/marked as complete will be labelled as such to make it easy for the user to see what they have done and what they need to do.
 #### _Inputs (with type information):_ List of topics (type: python list), Topics user has completed (type: python list, can make this another column of the list of topics - mark a topics as 1 if completed or 0 if not completed), whether or not a refresh button has been pressed, similar to the degree audit on myplan (type: boolean, whether or not a key is pressed) - alternative to the refresh button is auto-refreshing the list.
 #### _Outputs (with type information):_ A list of topics which clearly indicates which have been completed and which hasn't (type: python list in a UI), these topics can be selected to navigate user to practice problems/instruction on that topic.
@@ -63,12 +57,12 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 ### View Learning Progress
 #### _Name:_ v_learn_prog
 #### _What it does:_ Generates graphics to display learning progress of student. Shows what they have learned, what they need to learn, areas they have struggled or excelled in, maybe amount of time spent in several areas, and relative size of a topic. Similar to the plots a Jira Dashboard would produce.
-#### _Inputs (with type information):_ Results from the Data Processing and Data Analysis Algorithms *(ASK GROUP MAYBE JUST ONE OF THEM)* (type: TBD, but likely numpy arrays or dataframes)
+#### _Inputs (with type information):_ Results from the Data Processing and Data Analysis Algorithms (type: TBD, but likely numpy arrays or dataframes)
 #### _Outputs (with type information):_ Clear, readable graphical representations of student progress. Should be able to help them identify areas of strengths and weaknesses and develop a learning plan from. (type: plots)
 
 ### View Problem Bank
 #### _Name:_ v_prob_bank
-#### _What it does:_ When a user navigates to this page/tab on the app it will populate a list of available practice problems. These problems will be sorted by topic, user should be able to filter based on topic, level of difficulty, and problem size *(ANYTHING ELSE???)*.  Problems the user has already completed will be labelled as such to make it easy for the user to see what they have done and what they need to do (or they won't display at all).
+#### _What it does:_ When a user navigates to this page/tab on the app it will populate a list of available practice problems. These problems will be sorted by topic, user should be able to filter based on topic, level of difficulty, and problem size.  Problems the user has already completed will be labelled as such to make it easy for the user to see what they have done and what they need to do (or they won't display at all).
 #### _Inputs (with type information):_ List of problems (type: python list with several columns for each filter), Topics user has completed (type: python list, can make this another column of the list of topics - mark a topics as 1 if completed or 0 if not completed), whether or not a refresh button has been pressed, similar to the degree audit on myplan (type: boolean, whether or not a key is pressed) - alternative to the refresh button is auto-refreshing the list.
 #### _Outputs (with type information):_ A list of problems which clearly indicates which have been completed and which hasn't (type: python list in a UI), these problems can be selected to navigate user to problem description/solution page.
 
@@ -108,9 +102,6 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 #### _Inputs (with type information):_ problem description (type: str, and .py - if they want to provide skeleton code), problem solution (type: .py), test cases (type: numpy array or python list)
 #### _Outputs (with type information):_ Information from input is added to the prob_bank as a new problem which can be selected for practice (type: python list, .py)
 
-
-### *View Assignments DELETEING THIS BECAUSE IT IS JUST v_prob BUT USING THE v_curr. I DON"T THINK THIS IS NECESSARY AS STUDENTS CAN AND SHOULD JUST USE v_curr*
-
 ### Create  and View Feedback for Students
 #### _Name:_ c_feedback
 #### _What it does:_ When a teacher v_soln for students they have a textbox where they can provide feedback for students to see.
@@ -124,3 +115,4 @@ Yilin will want to evaluate student progress, view their solutions/submitted wor
 #### _Outputs (with type information):_ Clear, readable graphical representations of student(s)/class progress. Should be able to help them identify areas of strengths and weaknesses. (type: plots)
 
 # Component Specs
+# MURTAZA FILL THIS OUT
