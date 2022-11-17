@@ -1,0 +1,52 @@
+body {
+    background: #ffffff;
+    /* \background-image: url("bg.webp"); */
+    color: #000000;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+    font-family: "Verdana";
+  }
+
+  p {
+    font-family: "Georgia";
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+/* This sets navigation strip color*/
+  .bg-steel {
+    /* background-color: #ffffff; */
+    font-family: "Garamond";
+    border-bottom: 1px solid #333;
+
+  }
+
+/* This sets navigation buttons color*/
+  .site-header .navbar-nav .nav-link {
+    color: #000000;
+  }
+
+/* This sets navigation buttons color while pointing with mouse*/
+  .site-header .navbar-nav .nav-link:hover {
+    color: #808080;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  /* This sets all content*/
+  .content-section {
+    font-family: "Garamond";
+    color: #000000;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
