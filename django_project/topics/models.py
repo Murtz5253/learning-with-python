@@ -1,14 +1,7 @@
 from django.db import models
-from django_mirror.widgets import MirrorArea
-from codemirror import CodeMirrorTextarea
-
-codemirror_widget = CodeMirrorTextarea(
-    mode="python",
-    theme="cobalt",
-    config={
-        'fixedGutter': True
-    },
-)
+from django import forms
+from django.forms import ModelForm
+from django_ace import AceWidget
 
 # Create your models here.
 class Question(models.Model):
@@ -17,6 +10,12 @@ class Question(models.Model):
     It will be stored as a multi-line string with indents, and
     displayed inside of a code editor.
     """
-    question_code = models.TextField(
-        widget=codemirror_widget
-    )
+    question_code = models.TextField(default="")
+
+class QuestionForm(ModelForm):
+    class Meta:
+        model = Question
+        fields = ['question_code']
+        widgets = {
+            'question_code': AceWidget,
+        }
