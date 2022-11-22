@@ -6,3 +6,6 @@ def home(request):
 
 def topic(request):
     return render(request, 'topics/topic.html', {'title': 'List of Topics'})
+
+def problems(request):
+    return render(request, 'topics/problems.html', {'title': 'List of Problems'})

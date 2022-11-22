@@ -1,0 +1,10 @@
+[
+    {
+      "model": "topics.Question",
+      "pk": 1,
+      "fields": {
+        "question_code": "def test_function():\n    print('Hello, world!')"
+      }
+    }
+]
+

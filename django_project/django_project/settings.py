@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-i5g5(^q5v3v%mrcn%pb(c@c_)qeta*_gv@h@ufa-nrinjon(d6
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CODEMIRROR_PATH = r"/home/murtaza53/cse_583/lwp_env/lib/python3.9/site-packages/codemirror"
 
 
 # Application definition
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'codemirror2'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +128,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# use DJANGO_MIRROR_DEFAULTS to specify default options for your widgets
+# see the next section for more info about the options
+DJANGO_MIRROR_DEFAULTS = {
+    'mode': 'rst',
+    'addons': ['mode/overlay'],
+    'line_wrapping': True,
+}
