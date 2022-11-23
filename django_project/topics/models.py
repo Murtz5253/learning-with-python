@@ -17,5 +17,5 @@ class QuestionForm(ModelForm):
         model = Question
         fields = ['question_code']
         widgets = {
-            'question_code': AceWidget,
+            'question_code': AceWidget(mode='python', theme='twilight'),
         }
