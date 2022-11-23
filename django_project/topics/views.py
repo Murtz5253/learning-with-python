@@ -16,7 +16,7 @@ def problems(request):
         form = QuestionForm(request.POST, initial={'question_code': '# YOUR CODE HERE'})
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('/problems')
     else:
         form = QuestionForm(initial={'question_code': '# YOUR CODE HERE'})
     return render(request, "topics/problems.html", {
