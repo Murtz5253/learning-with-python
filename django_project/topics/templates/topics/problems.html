@@ -1,4 +1,18 @@
 {% extends "topics/base.html" %}
 {% block content %}
-    <h1>List of Problems</h1>
-{% endblock content%}
+<head>
+    <title>List of Problems</title>
+    {{ form.media }}
+</head>
+<body>
+    {% for problem in problems %}
+    <hr/>
+    <pre>{{ problem.question_code }}</pre>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit"/>
+    </form>
+    {% endfor %}
+</body>
+{% endblock content %}
