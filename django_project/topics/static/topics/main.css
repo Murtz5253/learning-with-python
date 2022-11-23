@@ -20,7 +20,7 @@ body {
   
 /* This sets navigation strip color*/
   .bg-steel {
-    background-color: #7a1010;
+    background-color: #ffffff; /*Navbar hold*/
     font-family: "Garamond";
     border-bottom: 1px solid #333;
 
