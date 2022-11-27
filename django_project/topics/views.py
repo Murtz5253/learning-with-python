@@ -8,9 +8,6 @@ def home(request):
 def topic(request):
     return render(request, 'topics/topic.html', {'title': 'List of Topics'})
 
-# def problems(request):
-#     return render(request, 'topics/problems.html', {'title': 'List of Problems'})
-
 def problems(request):
     if request.method == 'POST':
         form = ProblemForm(request.POST, initial={'problem_code': '# YOUR CODE HERE'})
@@ -26,3 +23,6 @@ def problems(request):
         "form": form,
         "problems": Problem.objects.all()
     })
+
+def solutions(request):
+    return render(request, 'topics/solutions.html', {'title': 'Submitted Solutions'})
