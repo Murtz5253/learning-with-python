@@ -5,9 +5,13 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib import admin
 
-from .models import Question, QuestionForm
+from .models import Problem, ProblemForm, Solution
 
-class QuestionAdmin(admin.ModelAdmin):
-    form = QuestionForm
+class ProblemAdmin(admin.ModelAdmin):
+    form = ProblemForm
 
-admin.site.register(Question, QuestionAdmin)
+class SolutionAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Problem, ProblemAdmin)
+admin.site.register(Solution, SolutionAdmin)

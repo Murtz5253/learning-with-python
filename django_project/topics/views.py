@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Question, QuestionForm
+from .models import Problem, ProblemForm, Solution
 
 def home(request):
     return render(request, 'topics/home.html')
@@ -13,13 +13,16 @@ def topic(request):
 
 def problems(request):
     if request.method == 'POST':
-        form = QuestionForm(request.POST, initial={'question_code': '# YOUR CODE HERE'})
+        form = ProblemForm(request.POST, initial={'problem_code': '# YOUR CODE HERE'})
         if form.is_valid():
-            form.save()
+            # We want to store the user's response in a Solution DB object
+            solution = Solution()
+            solution.solution_code = form.cleaned_data['problem_code']
+            solution.save()
             return redirect('/problems')
     else:
-        form = QuestionForm(initial={'question_code': '# YOUR CODE HERE'})
+        form = ProblemForm(initial={'problem_code': '# YOUR CODE HERE'})
     return render(request, "topics/problems.html", {
         "form": form,
-        "problems": Question.objects.all()
+        "problems": Problem.objects.all()
     })
