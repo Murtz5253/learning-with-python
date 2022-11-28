@@ -25,4 +25,6 @@ def problems(request):
     })
 
 def solutions(request):
-    return render(request, 'topics/solutions.html', {'title': 'Submitted Solutions'})
+    return render(request, "topics/solutions.html", {
+        "solutions": Solution.objects.all()
+    })
