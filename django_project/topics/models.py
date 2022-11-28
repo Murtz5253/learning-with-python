@@ -13,6 +13,12 @@ class Problem(models.Model):
     problem_code = models.TextField(default="")
 
 class ProblemForm(ModelForm):
+    """
+    This ModelForm is an adjunct to the Problem class to allow usage
+    of the Ace Widget Code Editor as well as provide a place for the
+    user to submit code. Its only field is the same field as the
+    Problem class, storing the skeleton code as formatted text.
+    """
     class Meta:
         model = Problem
         fields = ['problem_code']
@@ -30,3 +36,19 @@ class Solution(models.Model):
 
     # Store the solution code
     solution_code = models.TextField(default="")
+
+class SolutionForm(ModelForm):
+    """
+    This ModelForm is an adjunct to the Solution class.
+    Technically, a form is not necessary for Solutions.
+    However, this is a workaround so that the AceWidget
+    can be used to format the code properly. The submit
+    button will be hidden, so this will not function like
+    a traditional form.
+    """
+    class Meta:
+        model = Solution
+        fields = ['solution_code']
+        widgets = {
+            'solution_code': AceWidget(mode='python', theme='twilight'),
+        }

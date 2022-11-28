@@ -1,9 +1,9 @@
 [
     {
-      "model": "topics.Question",
+      "model": "topics.Problem",
       "pk": 1,
       "fields": {
-        "question_code": "def test_function():\n    print('Hello, world!')"
+        "problem_code": "def test_function():\n    print('Hello, world!')"
       }
     }
 ]

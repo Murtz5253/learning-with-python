@@ -5,13 +5,13 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib import admin
 
-from .models import Problem, ProblemForm, Solution
+from .models import Problem, ProblemForm, Solution, SolutionForm
 
 class ProblemAdmin(admin.ModelAdmin):
     form = ProblemForm
 
 class SolutionAdmin(admin.ModelAdmin):
-    pass
+    form = SolutionForm
 
 admin.site.register(Problem, ProblemAdmin)
 admin.site.register(Solution, SolutionAdmin)
