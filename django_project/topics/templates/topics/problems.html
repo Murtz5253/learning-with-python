@@ -2,7 +2,7 @@
 {% block content %}
 <head>
     <title>List of Problems</title>
-    {{ form.media }}
+    <!-- {{ form.media }} -->
 </head>
 <body>
     {% for problem in problems %}
@@ -10,6 +10,7 @@
     <pre>{{ problem.problem_code }}</pre>
     <form action="" method="post">
         {% csrf_token %}
+        {{ form.media }}
         {{ form.as_p }}
         <input type="submit"/>
     </form>
