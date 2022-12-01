@@ -32,8 +32,11 @@ class Solution(models.Model):
     This class represents the submitted solution.
     It will be stored as a multi-line string with indents.
     """
-    # Will need to eventually add foreign key or reference to Question + student_id
-    # question_object, student_id =
+    # Will need to eventually add foreign key to reference student/user
+    # student = ...
+
+    # Define a relationship to the associated problem for this solution
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE, default=-1)
 
     # Store the solution code
     solution_code = models.TextField(default="")
