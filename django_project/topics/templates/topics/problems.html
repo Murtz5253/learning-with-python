@@ -3,11 +3,13 @@
 <head>
     <title>List of Problems</title>
 </head>
+<h1>List of Problems</h1>
+<br/>
 <body>
     {% if problem_list %}
         <ul>
         {% for problem in problem_list %}
-            <li><a href="/problems/{{problem.problem_id}}/">{{problem.problem_id}}</a></li>
+            <li><a href="/problems/{{problem.problem_id}}/">Problem {{problem.problem_id}}</a></li> <br/>
         {% endfor %}
         </ul>
     {% else %}
