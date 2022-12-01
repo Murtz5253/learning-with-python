@@ -10,6 +10,7 @@ class Problem(models.Model):
     It will be stored as a multi-line string with indents, and
     displayed inside of a code editor.
     """
+    problem_id = models.IntegerField(primary_key=True, default=-1)
     problem_code = models.TextField(default="")
 
 class ProblemForm(ModelForm):

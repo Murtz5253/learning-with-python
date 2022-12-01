@@ -2,18 +2,16 @@
 {% block content %}
 <head>
     <title>List of Problems</title>
-    <!-- {{ form.media }} -->
 </head>
 <body>
-    {% for problem in problems %}
-    <hr/>
-    <pre>{{ problem.problem_code }}</pre>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <input type="submit"/>
-    </form>
-    {% endfor %}
+    {% if problem_list %}
+        <ul>
+        {% for problem in problem_list %}
+            <li><a href="/problems/{{problem.problem_id}}/">{{problem.problem_id}}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No problems are available.</p>
+    {% endif %}
 </body>
 {% endblock content %}
