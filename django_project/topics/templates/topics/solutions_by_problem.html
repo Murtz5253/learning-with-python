@@ -6,10 +6,12 @@
 </head>
 <body>
     <hr/>
-    <form action="">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-    </form>
+    {% for form in forms %}
+        <form action="">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+        </form>
+    {% endfor %}
 </body>
 {% endblock content %}

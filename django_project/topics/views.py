@@ -36,8 +36,14 @@ def solutions(request):
 
 def solution_detail(request, problem_id):
     problem = get_object_or_404(Problem, pk=problem_id)
-    one_solution = problem.solutions.all()[0]
-    form = SolutionForm(initial={'solution_code': one_solution.solution_code})
+    # one_solution = problem.solutions.all()[0]
+    # form = SolutionForm(initial={'solution_code': one_solution.solution_code})
+    # return render(request, "topics/solutions_by_problem.html", {
+    #     "form": form
+    # })
+    forms = list()
+    for solution in problem.solutions.all():
+        forms.append(SolutionForm(initial={'solution_code': solution.solution_code}))
     return render(request, "topics/solutions_by_problem.html", {
-        "form": form
+        'forms': forms
     })
