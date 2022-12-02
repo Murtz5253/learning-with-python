@@ -1,14 +1,16 @@
 {% extends "topics/base.html" %}
 {% block content %}
-<head>
-    <title>Submitted Solutions</title>
-</head>
-<h1>Submitted Solutions</h1>
+<h1>List of Solutionss</h1>
+<br/>
 <body>
-    {% for solution in solutions %}
-    <hr/>
-    <pre>{{ solution.solution_code }}</pre>
-    {% endfor %}
+    {% if problem_list %}
+        <ul>
+        {% for problem in problem_list %}
+            <li><a href="/solutions/{{problem.problem_id}}/">Solution for Problem {{problem.problem_id}}</a></li> <br/>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No solutions are available.</p>
+    {% endif %}
 </body>
 {% endblock content %}
-

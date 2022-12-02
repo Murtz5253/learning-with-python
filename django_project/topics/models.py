@@ -2,6 +2,7 @@ from django.db import models
 from django import forms
 from django.forms import ModelForm
 from django_ace import AceWidget
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 class Problem(models.Model):
@@ -36,7 +37,9 @@ class Solution(models.Model):
     # student = ...
 
     # Define a relationship to the associated problem for this solution
-    problem = models.ForeignKey(Problem, on_delete=models.CASCADE, default=-1)
+    # The "related_name" parameter will let us access all of a problem's solutions
+    # To do so, use the syntax "problem.solutions.all()"
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE, related_name="solutions")
 
     # Store the solution code
     solution_code = models.TextField(default="")
