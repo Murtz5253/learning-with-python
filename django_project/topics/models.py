@@ -4,6 +4,12 @@ from django.forms import ModelForm
 from django_ace import AceWidget
 
 # Create your models here.
+class Topic(models.Model):
+    """
+    When you know what is going on, add the docstring XD
+    """
+    
+    
 class Problem(models.Model):
     """
     This class represents a practice question for the web application.

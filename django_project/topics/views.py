@@ -1,11 +1,12 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from .models import Problem, ProblemForm, Solution
+from .models import Problem, ProblemForm, Solution, Topic
 
 def home(request):
     return render(request, 'topics/home.html')
 
 def topic(request):
-    return render(request, 'topics/topic.html', {'title': 'List of Topics'})
+    
+    return render(request, 'topics/topic.html', {'title': 'List of Topics???'})
 
 def problems(request):
     problem_list = Problem.objects.order_by('problem_id')
