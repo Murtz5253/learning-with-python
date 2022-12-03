@@ -1,12 +1,11 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from .models import Problem, ProblemForm, Solution, Topic
+from .models import Problem, ProblemForm, Solution, SolutionForm
 
 def home(request):
     return render(request, 'topics/home.html')
 
 def topic(request):
-    
-    return render(request, 'topics/topic.html', {'title': 'List of Topics???'})
+    return render(request, 'topics/topic.html', {'title': 'List of Topics'})
 
 def problems(request):
     problem_list = Problem.objects.order_by('problem_id')
@@ -21,6 +20,7 @@ def problem_detail(request, problem_id):
             # We want to store the user's response in a Solution DB object
             solution = Solution()
             solution.solution_code = form.cleaned_data['problem_code']
+            solution.problem = problem
             solution.save()
             return redirect('/problems')
     else:
@@ -30,6 +30,20 @@ def problem_detail(request, problem_id):
     })
 
 def solutions(request):
-    return render(request, "topics/solutions.html", {
-        "solutions": Solution.objects.all()
+    problem_list = Problem.objects.order_by('problem_id')
+    context = {'problem_list': problem_list}
+    return render(request, 'topics/solutions.html', context)
+
+def solution_detail(request, problem_id):
+    problem = get_object_or_404(Problem, pk=problem_id)
+    # one_solution = problem.solutions.all()[0]
+    # form = SolutionForm(initial={'solution_code': one_solution.solution_code})
+    # return render(request, "topics/solutions_by_problem.html", {
+    #     "form": form
+    # })
+    forms = list()
+    for solution in problem.solutions.all():
+        forms.append(SolutionForm(initial={'solution_code': solution.solution_code}))
+    return render(request, "topics/solutions_by_problem.html", {
+        'forms': forms
     })

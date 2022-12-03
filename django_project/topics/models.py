@@ -2,14 +2,9 @@ from django.db import models
 from django import forms
 from django.forms import ModelForm
 from django_ace import AceWidget
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
-class Topic(models.Model):
-    """
-    When you know what is going on, add the docstring XD
-    """
-    
-    
 class Problem(models.Model):
     """
     This class represents a practice question for the web application.
@@ -38,8 +33,13 @@ class Solution(models.Model):
     This class represents the submitted solution.
     It will be stored as a multi-line string with indents.
     """
-    # Will need to eventually add foreign key or reference to Question + student_id
-    # question_object, student_id =
+    # Will need to eventually add foreign key to reference student/user
+    # student = ...
+
+    # Define a relationship to the associated problem for this solution
+    # The "related_name" parameter will let us access all of a problem's solutions
+    # To do so, use the syntax "problem.solutions.all()"
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE, related_name="solutions")
 
     # Store the solution code
     solution_code = models.TextField(default="")
