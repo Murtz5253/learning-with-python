@@ -2,6 +2,7 @@
     {
       "model": "topics.Problem",
       "fields": {
+        "topic_id":1,
         "problem_id": 1,
         "problem_code": "def test_function():\n    print('Hello, world!')"
       }
@@ -9,6 +10,7 @@
     {
       "model": "topics.Problem",
       "fields": {
+        "topic_id":2,
         "problem_id": 2,
         "problem_code": "def test_function_SECOND():\n    print('Hello, world AGAIN!')"
       }

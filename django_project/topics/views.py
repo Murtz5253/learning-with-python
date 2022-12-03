@@ -7,6 +7,24 @@ def home(request):
 def topic(request):
     return render(request, 'topics/topic.html', {'title': 'List of Topics'})
 
+def topic1(request):
+    return render(request, 'topics/topic1.html', {'title': 'Topic 1: Function Parameter Use and Scope'})
+
+def topic2(request):
+    return render(request, 'topics/topic2.html', {'title': 'Topic 2: Variables, Identifiers, and Scope'})
+
+def topic3(request):
+    return render(request, 'topics/topic3.html', {'title': 'Topic 3: Recursion'})
+
+def topic4(request):
+    return render(request, 'topics/topic4.html', {'title': 'Topic 4: Iteration'})
+
+def topic5(request):
+    return render(request, 'topics/topic5.html', {'title': 'Topic 5: Objects'})
+
+def topic6(request):
+    return render(request, 'topics/topic6.html', {'title': 'Boolean Expressions'})
+
 def problems(request):
     problem_list = Problem.objects.order_by('problem_id')
     context = {'problem_list': problem_list}
