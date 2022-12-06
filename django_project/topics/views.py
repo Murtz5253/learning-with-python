@@ -40,7 +40,10 @@ def topic6(request):
 def problems(request):
     """Renders proplem list page"""
     problem_list = Problem.objects.order_by('problem_id')
-    context = {'problem_list': problem_list}
+    problem_dict = {'1': list(), '2': list(), '3': list(), '4': list(), '5': list(), '6': list()}
+    for problem in problem_list:
+        problem_dict[str(problem.topic_number)].append(problem)
+    context = {'problem_dict': problem_dict}
     return render(request, 'topics/problems.html', context)
 
 def problem_detail(request, problem_id):
