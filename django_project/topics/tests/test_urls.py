@@ -1,7 +1,7 @@
 import unittest
 
 from django.urls import resolve, reverse
-from topics.views import home, topic, topic1, topic2, topic3, topic4, topic5, topic6, problems, problem_detail, solutions, solution_detail
+from django_project.topics.views import home, topic, topic1, topic2, topic3, topic4, topic5, topic6, problems, problem_detail, solutions, solution_detail
 
 
 class TestUrls(unittest.TestCase):

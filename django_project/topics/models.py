@@ -15,7 +15,13 @@ class Problem(models.Model):
     displayed inside of a code editor.
     """
     problem_id = models.IntegerField(primary_key=True, default=-1)
+
+    # This variable stores the skeleton code for the problem
     problem_code = models.TextField(default="")
+
+    # This variable stores the topic number of the problem
+    topic_number = models.IntegerField()
+    
 
 class ProblemForm(ModelForm):
     """
