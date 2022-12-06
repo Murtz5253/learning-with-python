@@ -9,9 +9,9 @@
     {% if problem_list %}
         <ul>
         {% for problem in problem_list %}
-            <p>Topic 1 Problems</p>
+            
             <li><a href="/problems/{{problem.problem_id}}/">Problem {{problem.problem_id}}</a></li> 
-            <p>Topic 2 Problems</p> <br/>
+            
         {% endfor %}
         </ul>
     {% else %}
