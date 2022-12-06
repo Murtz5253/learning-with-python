@@ -11,7 +11,7 @@ body {
   }
 
   p {
-    font-family: "Georgia";
+    font-family: "Verdana";
   }
   
   ul {
@@ -21,7 +21,7 @@ body {
 /* This sets navigation strip color*/
   .bg-steel {
     background-color: #ffffff; /*Navbar hold*/
-    font-family: "Garamond";
+    font-family: "Verdana";
     border-bottom: 1px solid #333;
 
   }
@@ -42,7 +42,7 @@ body {
   
   /* This sets all content*/
   .content-section {
-    font-family: "Garamond";
+    font-family: "Verdana";
     color: #000000;
     padding: 10px 20px;
     border: 1px solid #000000;

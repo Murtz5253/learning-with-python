@@ -1,3 +1,6 @@
+"""
+This module contains all of the models which will be used by the Django app.
+"""
 from django.db import models
 from django import forms
 from django.forms import ModelForm
@@ -22,12 +25,15 @@ class ProblemForm(ModelForm):
     Problem class, storing the skeleton code as formatted text.
     """
     class Meta:
+        """
+        This class attaches the code box formatting to the ProblemForm class.
+        """
         model = Problem
         fields = ['problem_code']
         widgets = {
             'problem_code': AceWidget(mode='python', theme='twilight'),
         }
-    
+
 class Solution(models.Model):
     """
     This class represents the submitted solution.
@@ -54,6 +60,9 @@ class SolutionForm(ModelForm):
     a traditional form.
     """
     class Meta:
+        """
+        This class attaches the code box formatting to the SolutionForm class.
+        """
         model = Solution
         fields = ['solution_code']
         widgets = {
