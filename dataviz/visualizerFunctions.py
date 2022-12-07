@@ -1,0 +1,82 @@
+"""
+Data visualization tool functions.
+"""
+import numpy as np
+import pandas as pd
+import altair as alt
+import glob
+
+def importData(directory: str):
+    """
+    Function to import all csv data in directory.
+    Args: directory: string - location of data
+    """
+    # Define file list.
+    fileList = glob.glob(directory+"/*.csv")
+    # Sort by filename.
+    fileList.sort()
+    # Import and clean up all csv format data
+    data = [pd.DataFrame(pd.read_csv(fileList[0])).replace(-1,np.nan)]
+    for i in range(1,len(fileList)):
+        data.append(pd.DataFrame(pd.read_csv(fileList[i])).replace(-1,np.nan))
+    # Return dataset.
+    return data
+
+def createScoresChart(data: pd.DataFrame):
+    """
+    Function to create a chart to display one 
+    student's mean scores vs. question ID.
+    Args: data: Pandas DataFrame - data for one student
+    """
+    # calculate mean score per question
+    data["score"] = data[["misc_1a","misc_1b","misc_1c","misc_2a","misc_2b",
+                        "misc_3a","misc_3b","misc_3c","misc_4a","misc_4b",
+                        "misc_5a","misc_6a"]].mean(axis=1).round(1)
+    # Display data on chart.
+    chart = alt.Chart(data).mark_point().encode(
+        alt.X("question_id:N"),
+        y="score:Q"
+    # Add chart title.
+    ).properties(
+        title="Student " + str(round(data["student_id"].iat[0])) + " Scores"
+    )
+    # Format chart title.
+    chart.configure_title(
+        fontSize=20,
+        font="Courier",
+        anchor="start"
+    )
+    # Add data value labels to data points.
+    text = chart.mark_text(
+        align="center",
+        baseline="bottom",
+        dx=0,
+        dy=-5
+    ).encode(
+        text="score"
+    )
+    # Combine chart elements.
+    chart = chart + text
+    return chart
+
+def createTimeSpentChart(data: pd.DataFrame):
+    """
+    Function to create a chart to display one 
+    student's time spent vs. question ID.
+    Args: data: Pandas DataFrame - data for one student
+    """
+    # Display data on chart.
+    chart = alt.Chart(data).mark_point().encode(
+        alt.X("question_id:N"),
+        y="time_spent_min:Q"
+    # Add chart title.
+    ).properties(
+        title="Student " + str(round(data["student_id"].iat[0])) + " Time Spent Data"
+    )
+    # Format chart title.
+    chart.configure_title(
+        fontSize=20,
+        font="Courier",
+        anchor="start"
+    )
+    return chart
