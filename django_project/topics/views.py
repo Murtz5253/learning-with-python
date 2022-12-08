@@ -84,3 +84,7 @@ def solution_detail(request, problem_id):
     return render(request, "topics/solutions_by_problem.html", {
         'forms': forms
     })
+
+def progress(request):
+    """Renders view progress page"""
+    return render(request, 'topics/test.html', {'title': 'View Progress'})
