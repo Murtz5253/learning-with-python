@@ -36,12 +36,12 @@ class TestUrls(SimpleTestCase):
 
     def test_problem_detail_url_is_resolved(self):
         """ Resolving problem detail page url"""
-        url = reverse('topics-problem-detail')
+        url = reverse('topics-problem-detail', kwargs={'problem_id': 1})
         self.assertEqual(resolve(url).func, problem_detail)
 
     def test_solution_detail_url_is_resolved(self):
         """ Resolving solution detail page url"""
-        url = reverse('topics-solution-detail')
+        url = reverse('topics-solution-detail', kwargs={'problem_id': 1})
         self.assertEqual(resolve(url).func, solution_detail)
 
 
