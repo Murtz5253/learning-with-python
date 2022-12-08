@@ -2,10 +2,9 @@
 This module contains all of the models which will be used by the Django app.
 """
 from django.db import models
-from django import forms
 from django.forms import ModelForm
 from django_ace import AceWidget
-from django.contrib.postgres.fields import ArrayField
+
 
 # Create your models here.
 class Problem(models.Model):
@@ -21,7 +20,7 @@ class Problem(models.Model):
 
     # This variable stores the topic number of the problem
     topic_number = models.IntegerField()
-    
+
 
 class ProblemForm(ModelForm):
     """

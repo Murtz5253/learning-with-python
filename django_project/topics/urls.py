@@ -1,3 +1,5 @@
+"""This module generates the urls for the webpage"""
+"""This is a Django generated module"""
 from django.urls import path
 from . import views
 
