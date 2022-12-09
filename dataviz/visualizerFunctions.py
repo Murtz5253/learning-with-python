@@ -38,7 +38,7 @@ def createScoresChart(data: pd.DataFrame):
         y="score:Q"
     # Add chart title.
     ).properties(
-        title="Student " + str(round(data["student_id"].iat[0])) + " Scores"
+        title="Student " + str(round(data["student_id"].iat[0])) + " Mean Scores Data"
     )
     # Format chart title.
     chart.configure_title(
@@ -72,6 +72,46 @@ def createTimeSpentChart(data: pd.DataFrame):
     # Add chart title.
     ).properties(
         title="Student " + str(round(data["student_id"].iat[0])) + " Time Spent Data"
+    )
+    # Format chart title.
+    chart.configure_title(
+        fontSize=20,
+        font="Courier",
+        anchor="start"
+    )
+    return chart
+
+def createTopicsChart(data: pd.DataFrame):
+    """
+    Function to create a chart to display one 
+    student's mean score vs. topic/misconception.
+    Args: data: Pandas DataFrame - data for one student
+    """
+    # Define all topics.
+    topics = ["1a","1b","1c","2a","2b","3a",
+              "3b","3c","4a","4b","5a","6a"]
+    # Find mean score for each topic.
+    scores = [data["misc_1a"].mean(),
+              data["misc_1b"].mean(),
+              data["misc_1c"].mean(),
+              data["misc_2a"].mean(),
+              data["misc_2b"].mean(),
+              data["misc_3a"].mean(),
+              data["misc_3b"].mean(),
+              data["misc_3c"].mean(),
+              data["misc_4a"].mean(),
+              data["misc_4b"].mean(),
+              data["misc_5a"].mean(),
+              data["misc_6a"].mean(),]
+    # Create new DataFrame for topics data.
+    topicsData = pd.DataFrame({"topics":topics,"scores":scores})
+    # Display data on chart.
+    chart = alt.Chart(topicsData).mark_bar().encode(
+        alt.X("scores:Q",scale=alt.Scale(domain=[0, 100], nice=False)),
+        y="topics:N"
+    # Add chart title.
+    ).properties(
+        title="Student " + str(round(data["student_id"].iat[0])) + " Topics Performance Data"
     )
     # Format chart title.
     chart.configure_title(

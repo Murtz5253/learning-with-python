@@ -9,27 +9,19 @@ import altair as alt
 # Import functions.
 from visualizerFunctions import *
 
-# Initialize charts lists.
-scoreCharts = []
-timeCharts = []
 # Initialize renderer.
 alt.renderers.enable("html")
 
 # Import student data.
 data = importData("../data")
 
-# For each student in dataset.
+# Create, concatenate, and export charts 
+# for each student in dataset.
 for i in range(0,len(data)):
-    scoreCharts.append(createScoresChart(data[i]))
-    timeCharts.append(createTimeSpentChart(data[i]))
-
-# Combine charts.
-chart = alt.vconcat(*scoreCharts, *timeCharts
-# Format data points.
-).configure_point(
-    size=50,
-    filled=True
-)
+    chart = alt.vconcat(createScoresChart(data[i]),
+                        createTimeSpentChart(data[i]),
+                        createTopicsChart(data[i]))
+    chart.save("student_" + str(round(data[i]["student_id"].iat[0])) + "_charts.html")
 
 # export chart
 chart.save("test.html")
