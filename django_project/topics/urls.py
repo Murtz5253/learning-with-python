@@ -17,5 +17,5 @@ urlpatterns = [
     path('problems/<int:problem_id>/', views.problem_detail, name='topics-problem-detail'),
     path('solutions/', views.solutions, name='topics-solutions'),
     path('solutions/<int:problem_id>/', views.solution_detail, name='topics-solution-detail'),
-    path('progress/', views.progress, name='topics-progress')
+    path('test/', views.test, name='topics-test')
 ]
