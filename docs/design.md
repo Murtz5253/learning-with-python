@@ -1,7 +1,7 @@
 # User Stories
 
-## User 1: Carolyn, Student learning CS independently
-This student will want to select topics to learn, look through their learning progress, and select specific problems for practice. This student will need to do problems, and submit their problems to the app for grading. Carolyn is not expected to be super technically skilled and will have an interface that does not require code or terminal commands.
+## User 1: George, Student learning CS independently
+This student will want to select topics to learn, look through their learning progress, and select specific problems for practice. This student will need to do problems, and submit their problems to the app for grading. George is not expected to be super technically skilled and will have an interface that does not require code or terminal commands.
 ### User 1 Cases
 - View available topics to learn
 - View learning progress
@@ -9,8 +9,8 @@ This student will want to select topics to learn, look through their learning pr
 - Submit problems
 - View solution
 
-## User 3: Yilin, Site Administrator
-Yilin will want to view the studet view of the site, as well as the backend. She will need to add problems and solutions to the database, edit webpages, and add contact. She will need access to the entire website backend. Yilin is expected to have sufficient knowledge of Django to make these changes, as she will be in charge of the site's maintenance. 
+## User 3: Diana, Site Administrator
+Diana will want to view the studet view of the site, as well as the backend. She will need to add problems and solutions to the database, edit webpages, and add contact. She will need access to the entire website backend. Diana is expected to have sufficient knowledge of Django to make these changes, as she will be in charge of the site's maintenance. 
 ### User 3 Cases
 - View available topics to learn
 - View student version of website (includes all of User 1 Cases)
