@@ -1,3 +1,5 @@
+"""This module renders the views for the website"""
+
 from django.shortcuts import get_object_or_404, render, redirect
 from .models import Problem, ProblemForm, Solution, SolutionForm
 
@@ -11,15 +13,13 @@ def topic(request):
 
 def topic1(request):
     """Renders topic 1 page"""
-    return render(request, 'topics/topic1.html', {
-                    'title': 'Topic 1: Function Parameter Use and Scope'
-                    })
+    return render(request, 'topics/topic1.html',
+                  {'title': 'Topic 1: Function Parameter Use and Scope'})
 
 def topic2(request):
     """Renders topic 2 page"""
-    return render(request, 'topics/topic2.html', {
-                    'title': 'Topic 2: Variables, Identifiers, and Scope'
-                    })
+    return render(request, 'topics/topic2.html',
+                  {'title': 'Topic 2: Variables, Identifiers, and Scope'})
 
 def topic3(request):
     """Renders topic 3 page"""
