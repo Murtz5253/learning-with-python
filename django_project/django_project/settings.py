@@ -37,7 +37,7 @@ CODEMIRROR_PATH = r"/home/murtaza53/cse_583/lwp_env/lib/python3.9/site-packages/
 INSTALLED_APPS = [
     'topics.apps.TopicsConfig',
     'crispy_forms',
-    'registration.apps.RegistrationConfig',
+    'register.apps.RegisterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_ace',
 ]
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
