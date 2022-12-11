@@ -36,5 +36,6 @@ dependencies:
     - django-ace==1.0.13
     - django-codemirror==1.0.1
     - django-codemirror2==0.2
+    - django-crispy-forms==1.14.0
     - django-mirror==0.1.13
 prefix: /home/dhonicap/miniconda3/envs/djangoenv
