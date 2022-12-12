@@ -3,7 +3,9 @@ This module contains all of the models which will be used by the Django app.
 """
 from django.db import models
 from django.forms import ModelForm
+from django.contrib.auth import get_user_model
 from django_ace import AceWidget
+
 
 
 # Create your models here.
@@ -44,8 +46,13 @@ class Solution(models.Model):
     This class represents the submitted solution.
     It will be stored as a multi-line string with indents.
     """
-    # Will need to eventually add foreign key to reference student/user
-    # student = ...
+    # We need to link each solution to specific user so we can eventually specify
+    # which solutions to show based on the user.
+    # Simpler to do with solution than problem because the database needs to be
+    # populated with initial problems (how would we associate them to a user?)
+    # but not with initial solutions.
+    User = get_user_model() # Need to do this because we have a custom User model
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users")
 
     # Define a relationship to the associated problem for this solution
     # The "related_name" parameter will let us access all of a problem's solutions

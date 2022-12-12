@@ -56,6 +56,7 @@ def problem_detail(request, problem_id):
             solution = Solution()
             solution.solution_code = form.cleaned_data['problem_code']
             solution.problem = problem
+            solution.user = request.user
             solution.save()
             return redirect('/problems')
     else:
@@ -80,11 +81,28 @@ def solution_detail(request, problem_id):
     # })
     forms = list()
     for solution in problem.solutions.all():
-        forms.append(SolutionForm(initial={'solution_code': solution.solution_code}))
+        if solution.user == request.user:
+            # We only want to display the solutions for the current user
+            forms.append(SolutionForm(initial={'solution_code': solution.solution_code}))
     return render(request, "topics/solutions_by_problem.html", {
         'forms': forms
     })
 
 def test(request):
-    """Renders view progress page"""
-    return render(request, 'topics/test.html', {'title': 'View Progress'})
+    """
+    Renders view progress page. This is currently hardcoded
+    for the 4 example student use cases according to our data,
+    but will eventually be updated to show the data of actual
+    student that register and are saved into the database.
+
+    For any user that is not one of the four example students, it currently
+    just defaults to Student 4's data.
+    """
+    if request.user.username == 'student1':
+        return render(request, 'topics/student1_progress.html', {'title': 'View Progress'})
+    elif request.user.username == 'student2':
+        return render(request, 'topics/student2_progress.html', {'title': 'View Progress'})
+    elif request.user.username == 'student3':
+        return render(request, 'topics/student3_progress.html', {'title': 'View Progress'})
+    else:
+        return render(request, 'topics/student4_progress.html', {'title': 'View Progress'})
