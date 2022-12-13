@@ -10,6 +10,7 @@ def importData(directory: str):
     """
     Function to import all csv data in directory.
     Args: directory: string - location of data
+    Returns: data: list of DataFrame elements
     """
     # Define file list.
     fileList = glob.glob(directory+"/*.csv")
@@ -27,6 +28,7 @@ def createScoresChart(data: pd.DataFrame):
     Function to create a chart to display one 
     student's mean scores vs. question ID.
     Args: data: Pandas DataFrame - data for one student
+    Returns: chart: alt.Chart displaying the data
     """
     # calculate mean score per question
     data["score"] = data[["misc_1a","misc_1b","misc_1c","misc_2a","misc_2b",
@@ -64,6 +66,7 @@ def createTimeSpentChart(data: pd.DataFrame):
     Function to create a chart to display one 
     student's time spent vs. question ID.
     Args: data: Pandas DataFrame - data for one student
+    Returns: chart: alt.Chart displaying the data
     """
     # Display data on chart.
     chart = alt.Chart(data).mark_point().encode(
@@ -86,6 +89,7 @@ def createTopicsChart(data: pd.DataFrame):
     Function to create a chart to display one 
     student's mean score vs. topic/misconception.
     Args: data: Pandas DataFrame - data for one student
+    Returns: chart: alt.Chart displaying the data
     """
     # Define all topics.
     topics = ["1a","1b","1c","2a","2b","3a",
