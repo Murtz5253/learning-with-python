@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Add crispy forms
-CRISPY_TEMPLATE_PACK='bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
-AUTH_USER_MODEL = "register.CustomUser" 
+AUTH_USER_MODEL = "register.CustomUser"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
