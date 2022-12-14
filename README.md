@@ -30,16 +30,19 @@ There are two separate use cases for the tool in its current state, as all aspec
 
 ### The Web Application
 1. Ensure your virtual environment is activated as per the directions above.
-2. The web application is configured to run with a PostgreSQL database, which should have been installed as part of the virtual environment. However, you will still need to set up and configure the database before the web application can be used. Start by entering the PostgreSQL command prompt by typing in the command `psql`.
-3. Run the following commands in order to set up your database as per the project requirements (you can change the username and password if you wish; we just provide examples that can be easily referenced): `CREATE DATABASE central;`, `CREATE USER lwp WITH PASSWORD 'Hyku78^'`, `ALTER ROLE lwp SET client_encoding TO 'utf8';`, `ALTER ROLE lwp SET default_translation_isolation TO 'read committed';`, `ALTER ROLE lwp SET timezone TO 'UTC';`, `GRANT ALL PRIVILEGES ON DATABASE central TO lwp;`. These steps will set up the database to work with the Django web application.
-4. Exit the PostGreSQL prompt.
-5. Activate the database connection from your terminal. If you are running Linux, the command is `sudo pg_ctlcluster 12 main start`.
-6. Navigate to the outermost `django_project` directory in the project. To confirm that you are in the correct directory, run `ls` and ensure you see a file called `manage.py`.
-7. Run the following command to load initial data needed for the web application into the database: `python manage.py loaddata initial_data.json`.
-8. Start the server with the commanf `python manage.py runserver`. You should see a web application running at the specified port! You can navigate around the page and try out a few things.
-9. The following steps outline specific use cases that you may be interested in testing out.
-10. We have generated example student progress visualizations with toy data to demonstrate what this tool will look like when fully functioning. To test this out, you can register as an example student using the Register button in the top right. Ensure the username is "student1." The email and password can be whatever you wish, but the password must meet complexity requirements or the program will throw an error. After registering, sign in as this student, and go to "View Progress" to see some data pertaining to this student. You can try this with other usernames as well: "student2," "student3," and "student4."
-11. While logged in as a student, you can also go to the Problems page, and try editing and submitting code for various problems (currently, we just have sample problems with toy code). After you submit, you should find your respective solutions on the Solutions page. Submitted solutions are unique to the user logged in at a given time.
+2. The web application is configured to run with a PostgreSQL database, which you will need to install separately. On an Ubuntu machine, run the following command to install PostgreSQL: `sudo apt install postgresql postgresql-contrib`.
+3. To enter into the command prompt, run `sudo -u postgres psql`. If you run into any server connection issues, run `pg_lsclusters` to see the status. If it is down, you can run `sudo service postgresql restart`. Checking the status again should show it is online.
+4. Next, you will need to set up and configure the database before the web application can be used. Ensure that you are in the PSQL database.
+5. Run the following commands in order to set up your database as per the project requirements (you can change the username and password if you wish; we just provide examples that can be easily referenced): `CREATE DATABASE central;`, `CREATE USER lwp WITH PASSWORD 'Hyku78^';`, `ALTER ROLE lwp SET client_encoding TO 'utf8';`, `ALTER ROLE lwp SET default_translation_isolation TO 'read committed';`, `ALTER ROLE lwp SET timezone TO 'UTC';`, `GRANT ALL PRIVILEGES ON DATABASE central TO lwp;`. These steps will set up the database to work with the Django web application.
+6. Exit the PostGreSQL prompt.
+7. Ensure that your database is up and running before moving to the next step.
+8. Navigate to the outermost `django_project` directory in the project. To confirm that you are in the correct directory, run `ls` and ensure you see a file called `manage.py`.
+9. Start by setting up the database on the Django side by running the following two commands: `python manage.py makemigrations`, followed by `python manage.py migrate`.
+10. Run the following command to load initial data needed for the web application into the database: `python manage.py loaddata initial_data.json`.
+11. Start the server with the commanf `python manage.py runserver`. You should see a web application running at the specified port! You can navigate around the page and try out a few things.
+12. The following steps outline specific use cases that you may be interested in testing out.
+13. We have generated example student progress visualizations with toy data to demonstrate what this tool will look like when fully functioning. To test this out, you can register as an example student using the Register button in the top right. Ensure the username is "student1." The email and password can be whatever you wish, but the password must meet complexity requirements or the program will throw an error. After registering, sign in as this student, and go to "View Progress" to see some data pertaining to this student. You can try this with other usernames as well: "student2," "student3," and "student4."
+14. While logged in as a student, you can also go to the Problems page, and try editing and submitting code for various problems (currently, we just have sample problems with toy code). After you submit, you should find your respective solutions on the Solutions page. Submitted solutions are unique to the user logged in at a given time.
 ### The Data Analysis
 
 ## Acknowledgments
