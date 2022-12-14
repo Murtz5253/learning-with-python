@@ -12,7 +12,39 @@
       "fields": {
         "topic_number":2,
         "problem_id": 2,
-        "problem_code": "def test_function_SECOND():\n    print('Hello, world AGAIN!')"
+        "problem_code": "def test_function_two():\n    print('Hello, world TWICE!')"
+      }
+    },
+    {
+      "model": "topics.Problem",
+      "fields": {
+        "topic_number":3,
+        "problem_id": 3,
+        "problem_code": "def test_function_three():\n    print('Hello, world THRICE!')"
+      }
+    },
+    {
+      "model": "topics.Problem",
+      "fields": {
+        "topic_number":4,
+        "problem_id": 4,
+        "problem_code": "def test_function_four():\n    print('Hello, world FOUR TIMES!')"
+      }
+    },
+    {
+      "model": "topics.Problem",
+      "fields": {
+        "topic_number":5,
+        "problem_id": 5,
+        "problem_code": "def test_function_five():\n    print('Hello, world FIVE TIMES!')"
+      }
+    },
+    {
+      "model": "topics.Problem",
+      "fields": {
+        "topic_number":6,
+        "problem_id": 6,
+        "problem_code": "def test_function_six():\n    print('Hello, world SIX TIMES!')"
       }
     }
 ]
