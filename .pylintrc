@@ -7,7 +7,8 @@ extension-pkg-whitelist=
 
 # Add files or directories to the blacklist. They should be base names, not
 # paths.
-ignore=CVS, django_project/topics/migrations, manage.py, asgi.py, wsgi.py, django_project/register/migrations
+
+ignore=CVS, django_project/topics/migrations, manage.py, asgi.py, viz.py, wsgi.py, django_project/register/migrations
 
 # Add files or directories matching the regex patterns to the blacklist. The
 # regex matches against base names, not paths.
@@ -143,7 +144,11 @@ disable=print-statement,
         too-few-public-methods,
         no-member,
         unused-import,
-        no-else-return
+        no-else-return,
+        consider-using-enumerate,
+        no-self-use,
+        wildcard-import,
+        unused-wildcard-import
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
