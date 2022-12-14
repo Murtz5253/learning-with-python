@@ -85,4 +85,4 @@ There are four primary components to our system design:
 
 At a high level, questions will be stored in the database and displayed on the web application. As users complete questions, data will be continuously POSTed to the back end servers, and passed along to the magic algorithm (not being implemented currently), which in turn outputs JSON data containing information aboutuser progress on each topic. This data is then fed into a processing and analysis algorithm on the backend, whose results are finally displayed on the front end to users. A visual of this design is provided below.
 
-![Chart of System Design](../system_design.png)
+![Chart of System Design](./system_design.png)
