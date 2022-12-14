@@ -9,9 +9,9 @@ This student will want to select topics to learn, look through their learning pr
 - Submit problems
 - View solution
 
-## User 3: Diana, Site Administrator
-Diana will want to view the studet view of the site, as well as the backend. She will need to add problems and solutions to the database, edit webpages, and add contact. She will need access to the entire website backend. Diana is expected to have sufficient knowledge of Django to make these changes, as she will be in charge of the site's maintenance. 
-### User 3 Cases
+## User 2: Diana, Site Administrator
+Diana will want to view the student view of the site, as well as the backend. She will need to add problems and solutions to the database, edit webpages, and add contact. She will need access to the entire website backend. Diana is expected to have sufficient knowledge of Django to make these changes, as she will be in charge of the site's maintenance. 
+### User 2 Cases
 - View available topics to learn
 - View student version of website (includes all of User 1 Cases)
 - View admin version of website
