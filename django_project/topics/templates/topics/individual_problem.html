@@ -1,0 +1,17 @@
+{% extends "topics/base.html" %}
+{% block content %}
+<head>
+    <title>A Problem</title>
+    <!-- {{ form.media }} -->
+</head>
+<body>
+    <hr/>
+    <pre>{{ problem.problem_code }}</pre>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <input type="submit"/>
+    </form>
+</body>
+{% endblock content %}

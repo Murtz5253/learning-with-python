@@ -1,0 +1,93 @@
+{% extends "topics/base.html" %}
+{% block content %}
+<head>
+    <title>List of Problems</title>
+</head>
+<h1>List of Problems</h1>
+<br/>
+    <h3>Topic 1: Function Parameter Use and Scope</h2>
+        <body>
+            {% if problem_dict %}
+                <ul>
+                {% for problem in problem_dict.1 %}
+                    
+                    <li><a href="{% url 'topics-problem-detail' problem.problem_id %}">Problem {{problem.problem_id}}</a></li>
+                    
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No problems are available.</p>
+            {% endif %}
+        </body>
+    <h3>Topic 2: Variables, Identifiers, and Scope</h2>
+        <body>
+            {% if problem_dict %}
+                <ul>
+                {% for problem in problem_dict.2 %}
+                    
+                    <li><a href="{% url 'topics-problem-detail' problem.problem_id %}">Problem {{problem.problem_id}}</a></li>
+                    
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No problems are available.</p>
+            {% endif %}
+        </body>
+    <h3>Topic 3: Recursion</h2>
+        <body>
+            {% if problem_dict %}
+                <ul>
+                {% for problem in problem_dict.3 %}
+                    
+                    <li><a href="{% url 'topics-problem-detail' problem.problem_id %}">Problem {{problem.problem_id}}</a></li>
+                    
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No problems are available.</p>
+            {% endif %}
+        </body>
+    <h3>Topic 4: Iteration</h2>
+        <body>
+            {% if problem_dict %}
+                <ul>
+                {% for problem in problem_dict.4 %}
+        
+                    <li><a href="{% url 'topics-problem-detail' problem.problem_id %}">Problem {{problem.problem_id}}</a></li>
+
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No problems are available.</p>
+            {% endif %}
+        </body>
+    <h3>Topic 5: Objects</h2>
+        <body>
+            {% if problem_dict %}
+                <ul>
+                {% for problem in problem_dict.5 %}
+                    
+                    <li><a href="{% url 'topics-problem-detail' problem.problem_id %}">Problem {{problem.problem_id}}</a></li>
+                    
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No problems are available.</p>
+            {% endif %}
+        </body>
+    <h3>Topic 6: Boolean Expressions</h2>
+        <body>
+            {% if problem_dict %}
+                <ul>
+                {% for problem in problem_dict.6 %}
+                    
+                    <li><a href="{% url 'topics-problem-detail' problem.problem_id %}">Problem {{problem.problem_id}}</a></li>
+                    
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No problems are available.</p>
+            {% endif %}
+        </body>
+
+{% endblock content %}

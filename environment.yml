@@ -1,0 +1,41 @@
+name: djangoenv
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=5.1
+  - asgiref=3.5.2
+  - bzip2=1.0.8
+  - ca-certificates=2022.10.11
+  - certifi=2022.9.24
+  - django=4.1
+  - krb5=1.19.2
+  - ld_impl_linux-64=2.38
+  - libedit=3.1.20210910
+  - libffi=3.3
+  - libgcc-ng=11.2.0
+  - libgomp=11.2.0
+  - libpq=12.9
+  - libstdcxx-ng=11.2.0
+  - libuuid=1.41.5
+  - ncurses=6.3
+  - openssl=1.1.1s
+  - pip=22.2.2
+  - psycopg2=2.9.3
+  - python=3.10.6
+  - readline=8.2
+  - setuptools=65.5.0
+  - sqlite=3.39.3
+  - sqlparse=0.4.1
+  - tk=8.6.12
+  - tzdata=2022f
+  - wheel=0.37.1
+  - xz=5.2.6
+  - zlib=1.2.13
+  - pip:
+    - django-ace==1.0.13
+    - django-codemirror==1.0.1
+    - django-codemirror2==0.2
+    - django-crispy-forms==1.14.0
+    - django-mirror==0.1.13
+prefix: /home/dhonicap/miniconda3/envs/djangoenv

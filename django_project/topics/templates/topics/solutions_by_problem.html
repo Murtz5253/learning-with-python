@@ -1,0 +1,17 @@
+{% extends "topics/base.html" %}
+{% block content %}
+<head>
+    <title>Solutions for Individual Problem</title>
+    <!-- {{ form.media }} -->
+</head>
+<body>
+    <hr/>
+    {% for form in forms %}
+        <form action="">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+        </form>
+    {% endfor %}
+</body>
+{% endblock content %}
