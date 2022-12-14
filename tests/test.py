@@ -43,7 +43,7 @@ class TestViz(unittest.TestCase):
         (3) createTopicsChart functions.
         """
         data = visualizerFunctions.importData("/Users/yilinchen/learning-with-python/tests")
-        for i in range(0,len(data)):
+        for i in range(0, len(data)):
             chart = alt.vconcat(visualizerFunctions.createScoresChart(data[i]),
                                 visualizerFunctions.createTimeSpentChart(data[i]),
                                 visualizerFunctions.createTopicsChart(data[i]))
@@ -58,7 +58,7 @@ class TestViz(unittest.TestCase):
         with self.assertRaises(AttributeError):
             data = visualizerFunctions.importData("/Users/yilinchen/learning-with-python/tests")
             data2 = pd.DataFrame.to_dict(data)
-            for i in range(0,len(data2)):
+            for i in range(0, len(data2)):
                 chart = alt.vconcat(visualizerFunctions.createScoresChart(data2[i]),
                                     visualizerFunctions.createTimeSpentChart(data2[i]),
                                     visualizerFunctions.createTopicsChart(data2[i]))
@@ -73,7 +73,7 @@ class TestViz(unittest.TestCase):
         with self.assertRaises(AttributeError):
             data = visualizerFunctions.importData("/Users/yilinchen/learning-with-python/tests")
             data2 = pd.values.tolist(data)
-            for i in range(0,len(data2)):
+            for i in range(0, len(data2)):
                 chart = alt.vconcat(visualizerFunctions.createScoresChart(data2[i]),
                                     visualizerFunctions.createTimeSpentChart(data2[i]),
                                     visualizerFunctions.createTopicsChart(data2[i]))

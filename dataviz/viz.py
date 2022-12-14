@@ -10,12 +10,12 @@ alt.renderers.enable("html")
 # read in data
 data = pd.read_csv("../data/data_student_1.csv")
 # replace -1 values with NaN
-data = data.replace(-1,np.nan)
+data = data.replace(-1, np.nan)
 
 # calculate mean score per question
-data["score"] = data[["misc_1a","misc_1b","misc_1c","misc_2a","misc_2b",
-                      "misc_3a","misc_3b","misc_3c","misc_4a","misc_4b",
-                      "misc_5a","misc_6a"]].mean(axis=1).round(1)
+data["score"] = data[["misc_1a", "misc_1b", "misc_1c", "misc_2a", "misc_2b",
+                      "misc_3a", "misc_3b", "misc_3c", "misc_4a", "misc_4b",
+                      "misc_5a", "misc_6a"]].mean(axis=1).round(1)
 
 # scores chart
 chart = alt.Chart(data).mark_point().encode(

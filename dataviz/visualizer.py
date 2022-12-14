@@ -2,8 +2,6 @@
 Data visualization tool functions.
 """
 # Import packages.
-import numpy as np
-import pandas as pd
 import altair as alt
 
 # Import functions.
@@ -15,9 +13,9 @@ alt.renderers.enable("html")
 # Import student data.
 data = importData("../data")
 
-# Create, concatenate, and export charts 
+# Create, concatenate, and export charts
 # for each student in dataset.
-for i in range(0,len(data)):
+for i in range(0, len(data)):
     chart = alt.vconcat(createScoresChart(data[i]),
                         createTimeSpentChart(data[i]),
                         createTopicsChart(data[i]))
@@ -25,4 +23,3 @@ for i in range(0,len(data)):
 
 # export chart
 chart.save("test.html")
-    
