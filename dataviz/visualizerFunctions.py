@@ -36,10 +36,10 @@ def createScoresChart(data: pd.DataFrame):
                           "misc_3a", "misc_3b", "misc_3c", "misc_4a", "misc_4b",
                           "misc_5a", "misc_6a"]].mean(axis=1).round(1)
     # Display data on chart.
-    chart = alt.Chart(data).mark_point().encode(
-        alt.X("question_id:N"),
-        y="score:Q"
-        # Add chart title.
+    chart = alt.Chart(data,width=1150,height=350).mark_point().encode(
+        x=alt.X("question_id:N",title="Question ID"),
+        y=alt.Y("score:Q",title="Score (0-100)")
+    # Add chart title.
     ).properties(
         title="Student " + str(round(data["student_id"].iat[0])) + " Mean Scores Data"
     )
@@ -70,10 +70,10 @@ def createTimeSpentChart(data: pd.DataFrame):
     Returns: chart: alt.Chart displaying the data
     """
     # Display data on chart.
-    chart = alt.Chart(data).mark_point().encode(
-        alt.X("question_id:N"),
-        y="time_spent_min:Q"
-        # Add chart title.
+    chart = alt.Chart(data,width=1150,height=350).mark_bar().encode(
+        x=alt.X("question_id:N",title="Question ID"),
+        y=alt.Y("time_spent_min:Q",title="Time Spent (minutes)")
+    # Add chart title.
     ).properties(
         title="Student " + str(round(data["student_id"].iat[0])) + " Time Spent Data"
     )
@@ -111,10 +111,10 @@ def createTopicsChart(data: pd.DataFrame):
     # Create new DataFrame for topics data.
     topicsData = pd.DataFrame({"topics":topics, "scores":scores})
     # Display data on chart.
-    chart = alt.Chart(topicsData).mark_bar().encode(
-        alt.X("scores:Q", scale=alt.Scale(domain=[0, 100], nice=False)),
-        y="topics:N"
-        # Add chart title.
+    chart = alt.Chart(topicsData,width=1150,height=350).mark_bar().encode(
+        x=alt.X("scores:Q", title="Mean Score (0-100)",scale=alt.Scale(domain=[0, 100], nice=False)),
+        y=alt.Y("topics:N",title="Topic")
+    # Add chart title.
     ).properties(
         title="Student " + str(round(data["student_id"].iat[0])) + " Topics Performance Data"
     )

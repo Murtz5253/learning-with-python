@@ -44,6 +44,11 @@ There are two separate use cases for the tool in its current state, as all aspec
 13. We have generated example student progress visualizations with toy data to demonstrate what this tool will look like when fully functioning. To test this out, you can register as an example student using the Register button in the top right. Ensure the username is "student1." The email and password can be whatever you wish, but the password must meet complexity requirements or the program will throw an error. After registering, sign in as this student, and go to "View Progress" to see some data pertaining to this student. You can try this with other usernames as well: "student2," "student3," and "student4."
 14. While logged in as a student, you can also go to the Problems page, and try editing and submitting code for various problems (currently, we just have sample problems with toy code). After you submit, you should find your respective solutions on the Solutions page. Submitted solutions are unique to the user logged in at a given time.
 ### The Data Analysis
+1. Ensure `data` directory has .csv files for data analysis.
+2. Navigate to `dataviz` directory.
+3. Note `visualizerFunctions.py` and `visualizer.py`. The former contains the functions that the latter uses to generate student chart html files. Both are well-commented to describe their functionality.
+4. To generate, or update, the student html files, execute `visualizer.py`.
+5. Open any `student_ID_charts.html` file to view that student's charts.
 
 ## Acknowledgments
 
