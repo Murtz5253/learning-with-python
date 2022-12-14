@@ -18,7 +18,7 @@ from django.urls import path, include
 from register import views as reg_views
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('topics.urls')),
     path("register/", include('register.urls')),
     path('', include("django.contrib.auth.urls")),

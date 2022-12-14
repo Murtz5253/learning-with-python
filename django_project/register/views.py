@@ -12,11 +12,14 @@ def register(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
         if form.is_valid():
+            print("VALID")
             User = get_user_model()
             User.objects.create_user(username=form.cleaned_data['username'],
                                      email=form.cleaned_data['email'],
                                      password=form.cleaned_data['password1'])
         else:
+            print("INVALID")
+            print(form.errors)
             raise Http404
         return redirect("/")
     else:
