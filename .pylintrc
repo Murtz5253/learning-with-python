@@ -142,7 +142,8 @@ disable=print-statement,
         import-error,
         too-few-public-methods,
         no-member,
-        unused-import
+        unused-import,
+        no-else-return
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -286,7 +287,8 @@ good-names=i,
            k,
            ex,
            Run,
-           _
+           _,
+           User
 
 # Include a hint for the correct naming format with invalid-name.
 include-naming-hint=no
