@@ -21,7 +21,12 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
-    
-    - name: Test
+    - name: Lint with pylint
       run: |
-        python django_project/manage.py test topics
+        conda install pylint
+        pylint tests/ --rcfile=.pylintrc
+    - name: Test with pytest
+      run: |
+        python -m unittest discover
+        conda install pytest
+        pytest tests
