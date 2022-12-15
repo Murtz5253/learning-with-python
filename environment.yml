@@ -10,7 +10,7 @@ dependencies:
   - certifi=2022.9.24
   - django=4.1
   - krb5=1.19.2
-  - ld_impl_linux-64=2.38
+  #- ld_impl_linux-64=2.38
   - libedit=3.1.20210910
   - libffi=3.3
   - libgcc-ng=11.2.0
