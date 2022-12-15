@@ -1,10 +1,6 @@
 name: Django CI
 
-on:
-  push:
-    branches: [ "django_front" ]
-  pull_request:
-    branches: [ "django_front" ]
+on: [push]
 
 jobs:
   build:
