@@ -27,5 +27,6 @@ jobs:
         pylint tests/ --rcfile=.pylintrc
     - name: Test with pytest
       run: |
+        python -m unittest discover
         conda install pytest
         pytest tests/
