@@ -24,7 +24,8 @@ jobs:
     - name: Lint with pylint
       run: |
         conda install pylint
-        pylint * --rcfile=.pylintrc
+        pylint tests/ --rcfile=.pylintrc
+        pylint dataviz/ --rcfile=.pylintrc
     - name: Test with pytest
       run: |
         conda install pytest
