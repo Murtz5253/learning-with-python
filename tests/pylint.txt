@@ -1,10 +1,14 @@
-(base) yilinchen@Yilins-MacBook-Pro-3 tests % pylint test.py
-************* Module test
-test.py:20:4: R0201: Method could be a function (no-self-use)
-test.py:46:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
-test.py:38:4: R0201: Method could be a function (no-self-use)
-test.py:61:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
-test.py:76:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+(lwp) cclark@DESKTOP-PIB7EOQ:~/fresh_env/learning-with-python$ pylint dataviz/ --rcfile=.pylintrc
 
-------------------------------------------------------------------
-Your code has been rated at 8.39/10 (previous run: 8.06/10, +0.32)
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.74/10, +0.26)
+
+(lwp) cclark@DESKTOP-PIB7EOQ:~/fresh_env/learning-with-python$ pylint django_project/ --rcfile=.pylintrc
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(lwp) cclark@DESKTOP-PIB7EOQ:~/fresh_env/learning-with-python$ pylint tests/ --rcfile=.pylintrc
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
