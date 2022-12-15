@@ -22,8 +22,6 @@ jobs:
       run: |
         conda env update --file environment.yml --name base
     
-    - name: Test with pytest
+    - name: Test
       run: |
-        python -m unittest discover
-        conda install pytest
-        pytest tests/
+        python django_project/manage.py test topics
