@@ -4,13 +4,21 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=5.1
+  - altair=4.1.0
   - asgiref=3.5.2
+  - attrs=22.1.0
+  - blas=1.0
+  - bottleneck=1.3.5
   - bzip2=1.0.8
   - ca-certificates=2022.10.11
   - certifi=2022.9.24
   - django=4.1
+  - entrypoints=0.4
+  - intel-openmp=2021.4.0
+  - jinja2=3.1.2
+  - jsonschema=4.16.0
   - krb5=1.19.2
-  #- ld_impl_linux-64=2.38
+  - ld_impl_linux-64=2.38
   - libedit=3.1.20210910
   - libffi=3.3
   - libgcc-ng=11.2.0
@@ -18,24 +26,40 @@ dependencies:
   - libpq=12.9
   - libstdcxx-ng=11.2.0
   - libuuid=1.41.5
+  - markupsafe=2.1.1
+  - mkl=2021.4.0
+  - mkl-service=2.4.0
+  - mkl_fft=1.3.1
+  - mkl_random=1.2.2
   - ncurses=6.3
+  - numexpr=2.8.4
+  - numpy=1.23.4
+  - numpy-base=1.23.4
   - openssl=1.1.1s
+  - packaging=21.3
+  - pandas=1.5.2
   - pip=22.2.2
   - psycopg2=2.9.3
+  - pyparsing=3.0.9
+  - pyrsistent=0.18.0
   - python=3.10.6
+  - python-dateutil=2.8.2
+  - pytz=2022.1
   - readline=8.2
   - setuptools=65.5.0
+  - six=1.16.0
   - sqlite=3.39.3
   - sqlparse=0.4.1
   - tk=8.6.12
+  - toolz=0.12.0
   - tzdata=2022f
   - wheel=0.37.1
   - xz=5.2.6
   - zlib=1.2.13
   - pip:
-    - django-ace==1.0.13
-    - django-codemirror==1.0.1
-    - django-codemirror2==0.2
-    - django-crispy-forms==1.14.0
-    - django-mirror==0.1.13
+      - django-ace==1.0.13
+      - django-codemirror==1.0.1
+      - django-codemirror2==0.2
+      - django-crispy-forms==1.14.0
+      - django-mirror==0.1.13
 prefix: /home/dhonicap/miniconda3/envs/lwp
