@@ -13,6 +13,9 @@ In recent years, computer science education researchers have made efforts toward
 
 This tool attempts to build on this work by providing a usable tool with a repository of some of the existing concept inventory questions in Python. The tool is still under development, and the final goal is to develop a way to extract student misconceptions from free-form questions, as concept inventories are currently limited to a multiple-choice format.
 
+## A Note on Style
+Due to a miscommunication, our Django web application code is in `snake_case` and our data analysis/visualization is in `camelCase`. In our pylint configuraion file, we marked acceptable naming conventions as `any` for naming formats which threw an error.
+
 ## Repository Structure
 
 ## Installation Instructions
