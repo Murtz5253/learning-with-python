@@ -18,7 +18,11 @@ This tool attempts to build on this work by providing a usable tool with a repos
 ## A Note on Style
 Due to a miscommunication, our Django web application code is in `snake_case` and our data analysis/visualization is in `camelCase`. In our pylint configuraion file, we marked acceptable naming conventions as `any` for naming formats which threw an error.
 
+## A Note on Our Builds and Testing
+As is visible in our continuous integration badges, our build is passing for the data visualization (python-package-conda), but failing for Django. This is due to the fact that we have not yet set up a mock database to work with Github CI. The Django tests can be run locally with the command `python manage.py test topics` from the `django_project` folder.
+
 ## Repository Structure
+
 
 ## Installation Instructions
 Learning with Python is designed to be installed from the command line. Using a virtual environment is recommended, as there are many required dependencies (we provide an environment.yml file to streamline your setup process). Detailed directions are provided below.
