@@ -22,7 +22,7 @@ class TestViz(unittest.TestCase):
         Smoke test for importData function:
         The test will exam whether the function will run when we call it.
         """
-        directory = "./"
+        directory = "."
         visualizerFunctions.importData(directory)
 
     def test_import_edge(self):
