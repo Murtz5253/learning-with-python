@@ -24,7 +24,7 @@ jobs:
     - name: Lint with pylint
       run: |
         conda install pylint
-        pylint django_project/topics --rcfile=.pylintrc
+        pylint dataviz/ --rcfile=.pylintrc
     - name: Test with pytest
       run: |
         python -m unittest discover
