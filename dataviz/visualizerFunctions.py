@@ -13,8 +13,10 @@ def importData(directory: str):
     Args: directory: string - location of data
     Returns: data: list of DataFrame elements
     """
+    if not isinstance(directory, str):
+	raise TypeError("Input a String")
     # Define file list
-    fileList = ["../tests/data_student_1.csv", "../tests/data_student_3.csv"]
+    fileList = [r"./dataviz/data_student_1.csv", r"./dataviz/data_student_3.csv"]
     # Sort by filename.
     fileList.sort()
     # Import and clean up all csv format data
