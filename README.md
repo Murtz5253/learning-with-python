@@ -16,11 +16,16 @@ In recent years, computer science education researchers have made efforts toward
 
 This tool attempts to build on this work by providing a usable tool with a repository of some of the existing concept inventory questions in Python. The tool is still under development, and the final goal is to develop a way to extract student misconceptions from free-form questions, as concept inventories are currently limited to a multiple-choice format.
 
-## A Note on Style
+## A Note on Style, Builds, and Data
+
+### Style
 Due to a miscommunication, our Django web application code is in `snake_case` and our data analysis/visualization is in `camelCase`. In our pylint configuraion file, we marked acceptable naming conventions as `any` for naming formats which threw an error.
 
-## A Note on Our Builds and Testing
+### Builds
 As is visible in our continuous integration badges, our build is passing for the data visualization (python-package-conda), but failing for Django. This is due to the fact that we have not yet set up a mock database to work with Github CI. The Django tests can be run locally with the command `python manage.py test topics` from the `django_project` folder.
+
+### Data
+Currently, we have stored a minimal amount of data in our repository for testing and demo purposes only.
 
 ## Repository Structure
 ```
