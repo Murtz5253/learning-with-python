@@ -5,7 +5,7 @@ Data visualization tool functions.
 import altair as alt
 
 # Import functions.
-import visualizerFunctions as vf 
+import visualizerFunctions as vf
 
 # Initialize renderer.
 alt.renderers.enable("html")
