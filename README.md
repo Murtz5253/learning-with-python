@@ -1,4 +1,5 @@
 [![Python Package using Conda](https://github.com/Murtz5253/learning-with-python/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/Murtz5253/learning-with-python/actions/workflows/python-package-conda.yml)
+[![Django CI](https://github.com/Murtz5253/learning-with-python/actions/workflows/django.yml/badge.svg)](https://github.com/Murtz5253/learning-with-python/actions/workflows/django.yml)
 
 # Learning With Python
 A web application to help introductory learners with Python.
