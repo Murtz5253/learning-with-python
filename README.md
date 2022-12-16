@@ -22,7 +22,133 @@ Due to a miscommunication, our Django web application code is in `snake_case` an
 As is visible in our continuous integration badges, our build is passing for the data visualization (python-package-conda), but failing for Django. This is due to the fact that we have not yet set up a mock database to work with Github CI. The Django tests can be run locally with the command `python manage.py test topics` from the `django_project` folder.
 
 ## Repository Structure
-
+```
+.
+├── LICENSE
+├── README.md
+├── data
+│   ├── data_student_1.csv
+│   ├── data_student_2.csv
+│   ├── data_student_3.csv
+│   └── data_student_4.csv
+├── dataviz
+│   ├── __init__.py
+│   ├── data_student_1.csv
+│   ├── data_student_3.csv
+│   ├── student_1_charts.html
+│   ├── student_2_charts.html
+│   ├── student_3_charts.html
+│   ├── student_4_charts.html
+│   ├── test.html
+│   ├── visualizer.py
+│   └── visualizerFunctions.py
+├── django_project
+│   ├── __init__.py
+│   ├── db.sqlite3
+│   ├── django_project
+│   │   ├── __init__.py
+│   │   ├── asgi.py
+│   │   ├── forms.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── manage.py
+│   ├── register
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── migrations
+│   │   │   ├── 0001_initial.py
+│   │   │   └── __init__.py
+│   │   ├── models.py
+│   │   ├── templates
+│   │   │   ├── register
+│   │   │   │   └── register.html
+│   │   │   └── registration
+│   │   │       └── login.html
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   └── topics
+│       ├── admin.py
+│       ├── apps.py
+│       ├── fixtures
+│       │   └── initial_data.json
+│       ├── migrations
+│       │   ├── 0001_initial.py
+│       │   ├── 0002_remove_question_question_code.py
+│       │   ├── 0003_question_question_code.py
+│       │   ├── 0004_rename_question_problem_and_more.py
+│       │   ├── 0004_textmodel.py
+│       │   ├── 0005_solution.py
+│       │   ├── 0006_remove_problem_id_problem_problem_id.py
+│       │   ├── 0007_merge_20221201_2003.py
+│       │   ├── 0007_solution_problem.py
+│       │   ├── 0008_alter_solution_problem.py
+│       │   ├── 0009_remove_solution_problem.py
+│       │   ├── 0010_solution_problem.py
+│       │   ├── 0011_alter_solution_problem.py
+│       │   ├── 0012_alter_solution_problem.py
+│       │   ├── 0013_merge_20221203_1803.py
+│       │   ├── 0014_delete_textmodel.py
+│       │   ├── 0015_problem_topic_number.py
+│       │   ├── 0016_problem_user.py
+│       │   ├── 0017_alter_problem_user.py
+│       │   ├── 0018_remove_problem_user.py
+│       │   ├── 0019_problem_user.py
+│       │   ├── 0020_alter_problem_user.py
+│       │   ├── 0021_remove_problem_user_solution_user.py
+│       │   └── __init__.py
+│       ├── models.py
+│       ├── static
+│       │   └── topics
+│       │       └── main.css
+│       ├── templates
+│       │   └── topics
+│       │       ├── backup
+│       │       │   ├── student1_progress.html
+│       │       │   ├── student2_progress.html
+│       │       │   ├── student3_progress.html
+│       │       │   └── student4_progress.html
+│       │       ├── base.html
+│       │       ├── home.html
+│       │       ├── individual_problem.html
+│       │       ├── problems.html
+│       │       ├── solutions.html
+│       │       ├── solutions_by_problem.html
+│       │       ├── solutions_by_problem.html~parent of e300e54... Multiple solutions are now rendered on a page
+│       │       ├── student1_progress.html
+│       │       ├── student2_progress.html
+│       │       ├── student3_progress.html
+│       │       ├── student4_progress.html
+│       │       ├── test.html
+│       │       ├── topic.html
+│       │       ├── topic1.html
+│       │       ├── topic2.html
+│       │       ├── topic3.html
+│       │       ├── topic4.html
+│       │       ├── topic5.html
+│       │       └── topic6.html
+│       ├── tests
+│       │   ├── __init__.py
+│       │   ├── test_urls.py
+│       │   └── test_views.py
+│       ├── topics_texts
+│       │   └── 1.txt
+│       ├── urls.py
+│       └── views.py
+├── docs
+│   ├── concept_inventory.md
+│   ├── design.md
+│   └── system_design.png
+├── environment.yml
+└── tests
+    ├── __init__.py
+    ├── pylint.txt
+    ├── test.py
+    └── test_copy.ipynb
+```
 
 ## Installation Instructions
 Learning with Python is designed to be installed from the command line. Using a virtual environment is recommended, as there are many required dependencies (we provide an environment.yml file to streamline your setup process). Detailed directions are provided below.
@@ -58,6 +184,9 @@ There are two separate use cases for the tool in its current state, as all aspec
 3. Note `visualizerFunctions.py` and `visualizer.py`. The former contains the functions that the latter uses to generate student chart html files. Both are well-commented to describe their functionality.
 4. To generate, or update, the student html files, execute `visualizer.py`.
 5. Open any `student_ID_charts.html` file to view that student's charts.
+
+## License
+This software is licensed under the MIT license.
 
 ## Acknowledgments
 
