@@ -14,7 +14,7 @@ def importData(directory: str):
     Returns: data: list of DataFrame elements
     """
     if not isinstance(directory, str):
-	raise TypeError("Input a String")
+        raise TypeError("Input a String")
     # Define file list
     fileList = [r"./dataviz/data_student_1.csv", r"./dataviz/data_student_3.csv"]
     # Sort by filename.
