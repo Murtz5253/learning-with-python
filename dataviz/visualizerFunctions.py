@@ -14,7 +14,7 @@ def importData(directory: str):
     Returns: data: list of DataFrame elements
     """
     # Define file list
-    fileList = ["./data_student_1.csv", "./data_student_3.csv"]
+    fileList = ["../tests/data_student_1.csv", "../tests/data_student_3.csv"]
     # Sort by filename.
     fileList.sort()
     # Import and clean up all csv format data
