@@ -13,10 +13,8 @@ def importData(directory: str):
     Args: directory: string - location of data
     Returns: data: list of DataFrame elements
     """
-    # Define file list.
-    print(directory+"/data_student_1.csv")
-    print(glob.glob(directory+"/data_student_1.csv"))
-    fileList = glob.glob(directory+"/data_student_1.csv")
+    # Define file list
+    fileList = ["./data_student_1.csv", "./data_student_3.csv"]
     # Sort by filename.
     fileList.sort()
     # Import and clean up all csv format data
